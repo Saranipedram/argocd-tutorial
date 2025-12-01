@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: application-directory
+  name: application-pedram
 spec:
   destination:
-    namespace: directory
+    namespace: havij
     server: https://kubernetes.default.svc
   project: default
   source:
-    # directory:
-      # exclude: 'service.yml'
+          #    directory:
+          #      exclude: 'service.yml'
           #      include: '{serviceaccount.yml,service.yml}'
           #      recurse: true
-    path: v03-argocd-applications/directoryOfmanifests
+    path: v03-argocd-applications/pedram
     repoURL: https://github.com/Saranipedram/argocd-tutorial
     targetRevision: main
